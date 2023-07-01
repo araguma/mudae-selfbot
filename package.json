@@ -1,0 +1,24 @@
+{
+  "name": "mudae-selfbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "mudae",
+    "selfbot",
+    "discord"
+  ],
+  "author": "araguma",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "discord.js-selfbot-v13": "^2.14.6"
+  }
+}
