@@ -24,7 +24,7 @@ class Parser {
         });
     }
     handleMessage(message: Message) {
-        if(message.author.id === this.client.user.id && message.content.startsWith(config.prefix))
+        if(message.author.id === this.client.user.id && message.content.startsWith(config.commandPrefix))
             return this.emitParseEvent('argv', this.parseArgv(message), message);
         if(message.author.id !== config.mudaeId)
             return;
@@ -34,7 +34,7 @@ class Parser {
             return this.emitParseEvent('card', this.parseCard(message), message);
     }
     parseArgv(message: Message): Argv {
-        const content = message.content.slice(config.prefix.length);
+        const content = message.content.slice(config.commandPrefix.length);
         return content.match(/((?<=")[^"]+(?=")|[^"\s]+)/g) ?? [];
     }
     parseTu(message: Message): Tu {

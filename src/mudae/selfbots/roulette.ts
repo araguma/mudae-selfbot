@@ -14,7 +14,7 @@ class Roulette {
         this.parser.addParseEventListener('card', this.handleCard.bind(this));
         setTimeout(() => {
             this.action.sendMessage('$tu');
-        }, 1000 * 60 * 60);
+        }, config.tuCheckInterval);
     }
     handleTu(tu: Tu) {
         if(tu.dailyReady)
@@ -24,8 +24,15 @@ class Roulette {
         this.roll(tu.rolls);
     }
     handleCard(card: Card, original: Message) {
-        if(card.value > config.claimThreshold)
-            this.action.addReactionTo(original, config.claimEmoji);
+        if(
+            card.value > config.claimThreshold ||
+            (config.wishlistedCharacters as string[]).includes(card.name) ||
+            (config.wishlistedSeries as string[]).includes(card.name)
+        )
+            this.claim(original);
+    }
+    claim(message: Message) {
+        this.action.addReactionTo(message, config.claimEmoji);
     }
     roll(amount: number) {
         for(let i = 0; i < amount; i ++)
