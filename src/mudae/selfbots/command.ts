@@ -1,8 +1,8 @@
-import { Client } from "discord.js-selfbot-v13";
-import { Argv } from "../types";
-import Parser from "../parser";
-import Action from "../action";
-import Mudae from "./mudae";
+import { Client } from 'discord.js-selfbot-v13';
+import { Argv } from '../types';
+import Parser from '../parser';
+import Action from '../action';
+import Mudae from './mudae';
 
 class Command {
     constructor(

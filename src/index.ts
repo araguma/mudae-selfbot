@@ -1,5 +1,5 @@
-import { Client } from "discord.js-selfbot-v13";
-import Mudae from "./mudae/selfbots/mudae";
+import { Client } from 'discord.js-selfbot-v13';
+import Mudae from './mudae/selfbots/mudae';
 import config from './config.json';
 import 'dotenv/config';
 

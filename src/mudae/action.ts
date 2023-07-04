@@ -1,4 +1,4 @@
-import { Client, Message, PartialGroupDMChannel, TextChannel } from "discord.js-selfbot-v13";
+import { Client, Message, PartialGroupDMChannel, TextChannel } from 'discord.js-selfbot-v13';
 import config from '../config.json';
 import 'dotenv/config';
 

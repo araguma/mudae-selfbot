@@ -1,7 +1,7 @@
-import { Client } from "discord.js-selfbot-v13";
-import { Tu } from "../types";
-import Parser from "../parser";
-import Action from "../action";
+import { Client } from 'discord.js-selfbot-v13';
+import { Tu } from '../types';
+import Parser from '../parser';
+import Action from '../action';
 
 class Pokeslot {
     constructor(

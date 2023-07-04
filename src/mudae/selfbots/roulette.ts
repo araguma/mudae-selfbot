@@ -1,7 +1,7 @@
-import { Client, Message } from "discord.js-selfbot-v13";
-import { Card, Tu } from "../types";
-import Parser from "../parser";
-import Action from "../action";
+import { Client, Message } from 'discord.js-selfbot-v13';
+import { Card, Tu } from '../types';
+import Parser from '../parser';
+import Action from '../action';
 import config from '../../config.json';
 
 class Roulette {
@@ -39,6 +39,5 @@ class Roulette {
             this.action.sendMessage(config.rollCommand);
     }
 }
-
 
 export default Roulette;

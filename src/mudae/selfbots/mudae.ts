@@ -1,9 +1,9 @@
-import { Client, Message } from "discord.js-selfbot-v13";
-import Action from "../action";
-import Roulette from "./roulette";
-import Pokeslot from "./pokeslot";
-import Parser from "../parser";
-import Command from "./command";
+import { Client, Message } from 'discord.js-selfbot-v13';
+import Action from '../action';
+import Roulette from './roulette';
+import Pokeslot from './pokeslot';
+import Parser from '../parser';
+import Command from './command';
 
 const selfbots = {
     Roulette,

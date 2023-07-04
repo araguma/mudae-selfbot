@@ -1,5 +1,5 @@
-import { Client, Message } from "discord.js-selfbot-v13";
-import { Argv, Card, MudaeTypeMapping, Tu } from "./types";
+import { Client, Message } from 'discord.js-selfbot-v13';
+import { Argv, Card, MudaeTypeMapping, Tu } from './types';
 import config from '../config.json';
 
 type ParseEventCallback<K extends keyof MudaeTypeMapping> = (parsed: MudaeTypeMapping[K], original: Message) => void;
