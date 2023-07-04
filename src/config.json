@@ -1,0 +1,19 @@
+{
+    "token": "",
+    "defaultChannelId": "",
+    "actionsPerSecond": 1,
+    "maxRandomDelay": 1000,
+    "tuCheckInterval": 3600000,
+    "rollCommand": "$wa",
+    "claimThreshold": 500,
+    "wishlistedCharacters": [
+
+    ],
+    "wishlistedSeries": [
+
+    ],
+    "claimEmoji": "🎉",
+
+    "commandPrefix": "%",
+    "mudaeId": "432610292342587392"
+}

@@ -1,6 +1,7 @@
 import { Client } from "discord.js-selfbot-v13";
 import Mudae from "./mudae/selfbots/mudae";
 import config from './config.json';
+import 'dotenv/config';
 
 const client = new Client({
     checkUpdate: false,
@@ -15,4 +16,4 @@ client.on('update', () => {
     throw new Error(`discord.js-selfbot-v13 package is outdated`)
 })
 
-client.login(config.token);
+client.login(process.env.TOKEN ?? config.token);

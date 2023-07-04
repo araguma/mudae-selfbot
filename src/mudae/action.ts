@@ -1,5 +1,6 @@
 import { Client, Message, PartialGroupDMChannel, TextChannel } from "discord.js-selfbot-v13";
 import config from '../config.json';
+import 'dotenv/config';
 
 class Action {
     queue: Array<() => void> = [];
@@ -19,7 +20,7 @@ class Action {
     }
     sendMessage(message: Parameters<TextChannel['send']>[0]) {
         this.queue.push(() => {
-            const channel = this.client.channels.cache.get(config.defaultChannelId);
+            const channel = this.client.channels.cache.get(process.env.DEFAULT_CHANNEL_ID ?? config.defaultChannelId);
             if(channel?.type === 'GUILD_TEXT')
                 channel.send(message);
         });
